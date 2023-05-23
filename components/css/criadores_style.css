@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* AREA DE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+
+}
+
+:root {
+
+    --bg-color-header: #000;
+    --bg-color-body: #000;
+    --bg-color-main: #111;
+    --bg-experience_content: #222;
+    --bg-header: #444;
+
+    --color-sobre_titulo-p: #707070;
+
+
+    --color-sobre_titulo_h1: #8e0fe2;
+
+    --btn-bg-color-secondy: #8e0fe2;
+
+}
+
+body {
+
+    background-color: var(--bg-color-header);
+
+}
+
+header {
+
+    width: 100vw;
+    height: 25vh;
+    background-image: linear-gradient(to bottom, var(--bg-experience_content), var(--bg-color-main), var(--bg-color-body), transparent);
+    text-align: center;
+    padding: 20px 0px;
+
+}
+
+header h1 {
+
+    letter-spacing: 5px;
+    font-family: 'Berkshire Swash', cursive;
+    color: var(--color-sobre_titulo_h1);
+
+}
+
+.container {
+
+    width: 90%;
+    height: 30vh;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    border-radius: 10px;
+
+}
+
+.card {
+
+    background-color: var(--bg-experience_content);
+    box-shadow: 0px 4px 8px 0px rgba(44, 44, 44, 0.651);
+    border-radius: 10px;
+
+}
+
+.card_image {
+
+    min-height: 250px;
+
+}
+
+.card .card-1 {
+
+    background-image: url('../../assets/image/ana_beatriz.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--btn-bg-color-secondy);
+
+}
+
+.card .card-2 {
+
+    background-image: url('../../assets/image/ana_martins.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--btn-bg-color-secondy);
+
+}
+
+.card .card-3 {
+
+    background-image: url('../../assets/image/gabriel_rateiro.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-bottom: 1px solid var(--btn-bg-color-secondy);
+
+}
+
+.card .card-4 {
+
+    background-image: url('../../assets/image/tauna_silva.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--btn-bg-color-secondy);
+
+}
+
+.content {
+
+    text-align: center;
+    padding: 10px 15px;
+
+}
+
+.content h2 {
+
+    color: var(--btn-bg-color-secondy);
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0px;
+
+}
+
+.content p {
+
+    color: var(--color-sobre_titulo-p);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 10px 0px;
+
+}

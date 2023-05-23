@@ -1,0 +1,1177 @@
+@charset "UTF-8";
+
+/* AREA DE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family= Source + Sans+Pro:wght@200;300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+p {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+} 
+
+:root {
+
+    --bg-color-header: #000;
+    --bg-color-body: #000;
+    --bg-color-main: #111;
+    --bg-servisos: #111111de;
+    --bg-experience_content: #222;
+    --bg-footer_sociais: #212020;
+
+
+    --color-br-logo: #fff;
+    --color-nav-primaria: #fff;
+    --color-sobre_titulo: #fff;
+    --color-sobre_titulo-p: #707070;
+    --color-h2-section-div: #f7f7f7;
+    --color-sobre_titulo_h1: #8e0fe2;
+    --color-li_ativo: #3e3d3d;
+
+    /* ~ COLOR BTN */
+
+    --btn-color-primary: #cacaca;
+    --btn-br-color-primary: #ffefff;
+    --btn-bg-color-primary: #350f4b;
+
+    --btn-color-secondy: #f0f0f0;
+    --btn-br-color-secondy: #c7c7c7;
+    --btn-bg-color-secondy: #8e0fe2;
+
+    --btn-br-color-slider: #ffffff;
+
+
+    /* COR DA BORDA */
+
+    --br-color-footer_sociais: #333;
+    
+
+}
+
+body {
+
+    height: 100%;
+    background-color: var(--bg-color-body);
+    max-width: 1400px;
+    margin: 0 auto;
+    color: var(--btn-br-color-primary);
+
+}
+
+/* HEADER */
+
+header {
+
+    background-color: var(--bg-color-header);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+header img {
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-br-logo);
+
+}
+
+header .navegacao-primaria {
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+
+}
+
+header .navegacao-primaria li a {
+
+    width: 10px;
+    height: 10px;
+    color: var(--color-nav-primaria);
+    font-size: 1.3rem;
+
+}
+
+header .navegacao-primaria li a::after {
+
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-bottom: 4px solid transparent;
+    display: block;
+    transition: .9s ease-in-out;
+
+}
+
+header .navegacao-primaria li a:hover:after {
+
+    width: 100%;
+    height: 0px;
+    padding: 0px;
+    border-bottom: 4px solid var(--btn-bg-color-secondy);
+    border-radius: 3px;
+
+}
+
+/* SEÇÃO PAULO FREIRE */
+
+.section-div {
+
+    animation: inicializar .2s forwards;
+    background-color: var(--bg-color-header);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-self: center;
+    gap: 30px;
+    padding: 55px;
+
+}
+
+.section-div div {
+
+    margin-top: 120px;
+    align-self: start;
+    display: grid;
+    gap: 30px;
+
+} 
+
+.section-div div h2 {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--color-h2-section-div);
+
+}
+
+.section-div div h2.digitando {
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+
+}
+
+.digitando::after {
+
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 0.6s infinite;
+
+}
+
+.section-div div p {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: var(--color-h2-section-div);
+
+}
+
+.section-div .section-div_paulo_freire {
+
+    max-width: 100%;
+   
+}
+
+
+/* SEÇÃO PRINCIPAL SOBRE PAULO FREIRE */
+
+    main {
+
+        background-color: var(--bg-color-main);
+        border-radius: 10px;
+        color: var(--color-br-logo);
+
+    }
+
+    main .sobre {
+
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        justify-content: center;
+        padding: 40px;
+        
+    }
+
+    .sobre_titulo {
+
+        margin: 30px 0;
+        grid-column: 1/-1;
+        text-align: center;
+        color: var(--color-br-logo);
+
+    }
+
+    .sobre_titulo h1 {
+
+        font-size: 2.5rem;
+        color: var(--color-sobre_titulo_h1);
+        margin-bottom: 15px;
+        font-family: 'Berkshire Swash', cursive;
+
+    }
+
+    .sobre_titulo p {
+
+        color: var(--color-sobre_titulo-p);
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+    }
+
+    .sobre_titulo div {
+
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+    .sobre_titulo span {
+
+        display: block;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: var(--color-sobre_titulo_h1);
+
+    }
+
+    .sobre img {
+
+        animation: ladoSecao .5s ease-in-out forwards;
+        cursor: pointer;
+        grid-row: 2;
+        max-width: 100%;
+        border-radius: 4px;
+        filter: blur(0);
+
+    }
+
+    /* TRANSIÇÃO DA IMAGEM */
+
+    .sobre img:hover {
+
+        transition: .5s ease-in;
+        filter: blur(1px);
+
+    }
+
+    .sobre_conteudo {
+
+        animation: sobeSecao .6s ease-in-out forwards;
+        grid-column: 2/-1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: var(--color-sobre_titulo-p);
+
+    }
+
+    .sobre_texto {
+
+        display: grid;
+        grid-column: 1/-1;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .sobre_texto h1 {
+
+        font-size: 2.3rem;
+        color: var(--color-br-logo);
+        grid-column: 1/-1;
+
+    }
+
+    /* EFEITO DO TRAÇO DE BAIXO DO TÍTULO */
+
+    .sobre_texto h1::after {
+
+        background-color: var(--color-sobre_titulo_h1);
+        height: 6px;
+        width: 60px;
+        margin: 20px 0;
+        content: '';
+        display: block;
+        border-radius: 5px;
+
+    }
+
+    .sobre_texto p {
+
+        font-size: 1.3rem;
+        grid-row: 2;
+        grid-column: 1/-1;
+
+    }
+
+    .sobre_info {
+
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1/-1;
+        gap: 15px;
+        align-items: center;
+
+    }
+
+    .sobre_info i {
+
+        color: var(--color-sobre_titulo_h1);
+        display: inline-block;
+        padding-right: 15px;
+        font-size: 1.5rem;
+
+    }
+
+    .sobre_info p {
+
+        font-size: .9rem;
+
+    }
+
+
+    /* ^ TRABALHOS DE PAULO FREIRE SLIDE */
+
+    .wrapper {
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .slide-wrapper {
+
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .slide-list {
+
+        display: flex;
+
+    }
+
+    .slide-item {
+
+        flex-shrink: 0;
+        padding: 0 10px;
+        width: 90vw;
+        cursor: grab;
+
+    }
+
+    .slide-content {
+
+        border: 2.5px solid var(--btn-br-color-slider);
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0px 10px 12px #3838388e;
+
+    }
+
+    .slide-descrpition {
+
+        position: absolute;
+        bottom: 0;
+        color: var(--btn-br-color-primary);
+        background: linear-gradient(to bottom, var(--bg-color-body),  transparent);
+        width: 100%;
+        padding: 180px 80px 100px 80px;
+        border-radius: 20px;
+
+    }
+
+    .slide-descrpition h3 {
+
+        font-family: 'Berkshire Swash', sans-serif;
+        font-size: 28px;
+        color: var(--btn-bg-color-secondy);
+
+    }
+
+    .slide-descrpition p {
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+
+    }
+
+    .slide-item .slide-image {
+
+        width: 100%;
+        height: 50vh;
+        border-radius: 10px;
+
+    }
+
+    /* BUTTONS DE NAVEGAÇÃO SETAS */
+
+    
+    .slide-nav-button {
+
+        position: absolute;
+        color: var(--btn-br-color-slider);
+        background: transparent;
+        border: none;
+        font-size: 30px;
+        z-index: 1;
+        cursor: pointer;
+        margin-top: -82px;
+
+    }
+
+    .slide-nav-previous {
+
+        left: 22px;
+
+    }
+
+    .slide-nav-next {
+
+        right: 22px;
+
+    }
+
+    .slide-controls {
+
+        margin: 35px auto;
+
+    }
+
+    .slide-control-button {
+
+        background: transparent;
+        border: none;
+        color: var(--btn-br-color-primary);
+        font-size: 20px;
+        margin: 0px 6px;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+
+    }
+
+    .slide-control-button.active {
+
+        color: var(--btn-bg-color-secondy);
+        font-size: 24px;
+
+    }
+
+
+
+/* SEÇÃO BIOGRAFIA DE PAULO FREIRE */
+
+.biografia {
+
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--bg-color-main);
+    border-radius: 10px;
+
+}
+
+.biografia .bigrafic {
+
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+.biografia .bigrafic1_decription p, .bigrafic2_decription p {
+
+    color: var(--color-sobre_titulo-p);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+
+}
+
+/* TRABALHOS DE PAULO FREIRE */
+
+.premios {
+
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    padding: 40px;
+
+}
+
+.premios_list {
+
+    padding: 60px;
+
+
+}
+
+.premios_list ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.premios_list ul li {
+
+    cursor: pointer;
+    position: relative;
+    border-radius: 6px;
+    padding: 10px 40px 10px 40px;
+    display: grid;
+    align-content: center;
+    gap: 10px;
+    text-align: center;
+    max-width: 350px;
+    height: 600px;
+    background-color: var(--bg-color-main);
+
+}
+
+.premios_list ul li i {
+
+    font-size: 2rem;
+    color: var(--btn-bg-color-secondy);
+    text-shadow: 3px 3px 16px var(--btn-bg-color-primary);
+
+}
+
+.premios_list ul li h3 {
+
+    color: var(--btn-br-color-primary);
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+.premios_list ul li p {
+
+    color: var(--color-sobre_titulo-p);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+
+}
+
+.premios_list ul li::before {
+
+    content: '';
+    transition: .5s ease-in-out;
+    border-radius: 6px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-top: 4px solid var(--btn-bg-color-primary);
+    border-right: 4px solid transparent;
+    
+}
+
+.premios_list ul li::after {
+
+    content: '';
+    transition: .5s ease-in-out;
+    border-radius: 6px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 4px solid var(--btn-bg-color-primary);
+    border-left: 4px solid transparent;
+    
+}
+
+.premios_list li:hover::before {
+
+    width: 100%;
+    height: 100%;
+    border-top: 4px solid var(--btn-bg-color-primary);
+    border-right: 4px solid var(--btn-bg-color-primary);
+
+}
+
+.premios_list li:hover::after {
+
+    width: 100%;
+    height: 100%;
+    border-bottom: 4px solid var(--btn-bg-color-primary);
+    border-left: 4px solid var(--btn-bg-color-primary);
+
+}
+
+/* RESUMO DE PAULO FREIRE */
+
+.My_resume {
+
+    padding: 40px;
+    background-color: var(--bg-color-main);
+    border-radius: 10px;
+
+}
+
+.resume_generico {
+
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+    align-items: start;
+    border-radius: 3px;
+
+}
+
+.resume_generico h2 {
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--btn-bg-color-secondy);
+    justify-self: start;
+    padding: 10px;
+    border-radius: 3px;
+
+}
+
+.resume_generico h2 i {
+
+    margin-right: 10px;
+
+}
+
+.experience {
+
+    margin-bottom: 30px;
+    grid-column: 1;
+    grid-row: 1;
+
+}
+
+.education {
+
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.experience_content ul {
+
+    color: var(--btn-bg-color-secondy);
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+.resume_generico .experience_content div {
+
+    background-color: var(--bg-experience_content);
+    padding: 40px;
+    display: none;
+    animation: ladoSecao .5s ease-in-out forwards;
+    position: relative;
+
+}
+
+.resume_generico .experience_content div.ativo {
+
+    display: block;
+
+}
+
+.resume_generico .experience_content div,
+.resume_generico .education_content div {
+
+    border-radius: 5px;
+
+}
+
+.resume_generico .experience_content div::before {
+
+    content: '';
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid var(--bg-experience_content);
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+
+}
+
+.resume_generico .experience_content div span {
+
+    color: var(--btn-bg-color-secondy);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+
+}
+
+.resume_generico .experience_content div h3 {
+
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0;
+
+}
+
+.resume_generico .experience_content div p {
+
+    color: var(--color-sobre_titulo-p);
+    font-size: 1.1rem;
+
+}
+
+.experience_content ul li.ativo {
+
+    color: var(--color-li_ativo);
+
+}
+
+/* DIPLOMAS E FORMAÇÃO ACADEMICA DE PAULO PREIRE */
+
+.resume_generico .education_content div {
+
+    background-color: var(--bg-experience_content);
+    display: none;
+    animation: ladoSecao .5s ease-in-out forwards;
+    padding: 40px;
+    position: relative;
+
+}
+
+.resume_generico .education_content div::before {
+
+    content: '';
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid var(--bg-experience_content);
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+
+}
+
+.resume_generico .education_content div span {
+
+    color: var(--btn-bg-color-secondy);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+
+}
+
+.resume_generico .education_content div h3 {
+
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0;
+
+}
+
+.resume_generico .education_content div p {
+
+    color: var(--color-sobre_titulo-p);
+    font-size: 1.1rem;
+
+}
+
+.education_content ul {
+
+    color: var(--btn-bg-color-secondy);
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+.education_content ul li.ativo {
+
+    color: var(--color-li_ativo);
+
+}
+
+.resume_generico .education_content div.ativo {
+
+    display: block;
+
+
+}
+
+/* FOOTER */
+
+footer {
+
+    background-color: #000;
+    padding: 30px;
+
+}
+
+.footer_sociais {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    padding-top: 40px;
+
+}
+
+.footer_sociais li { 
+
+    background-color: var(--bg-footer_sociais);
+    border-radius: 3px;
+    border: 1px solid var(--br-color-footer_sociais);
+
+}
+
+.footer_sociais li a  {
+
+    padding: 20px;
+    color: var(--btn-br-color-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+
+}
+
+.footer_sociais li a i {
+
+    padding: 5px;
+    font-size: 1.2rem;
+
+}
+
+.footer_sociais li:hover {
+
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    background-color: var(--btn-bg-color-primary);
+
+}
+
+.footer_sociais::before {
+
+    content: '';
+    height: 5px;
+    width: 500px;
+    position: absolute;
+    bottom: -30px;
+    background-color: var(--btn-bg-color-primary);
+    border-radius: 2px;
+
+}
+
+footer .footer_comercial {
+
+    text-align: center;
+    color: var(--btn-br-color-secondy);
+    margin: 60px auto;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav_redes-sociais {
+
+    margin-top: 40px;
+
+}
+
+/* SCROOLBAR DO SITE*/
+
+::-webkit-scrollbar {
+
+    width: 15px;
+    background-color: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    width: 10px;
+    background-color: var(--btn-bg-color-secondy);
+    border-radius: 20px;
+    
+
+}
+
+/* EFEITOS DE PISCAR E DIGITAÇÃO SOBIR SEÇÃO */
+
+@keyframes inicializar {
+    
+    from {
+
+        opacity: 0;
+        transform: translate3D(0, -60px, 0);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translate3D(0, 0, 0);
+
+    }
+
+}
+
+
+@keyframes pisca {
+    
+    from {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes sobeSecao {
+    
+    from {
+
+        transition: .5s;
+        transform: translate3d(60px, 0, 0);
+
+    }
+
+    to {
+
+        transform: translate3d(0, 0, 0);
+
+    }
+
+}
+
+@keyframes ladoSecao {
+    
+    from {
+
+        transition: .5s;
+        transform: translate3d(-60px, 0, 0);
+
+    }
+
+    to {
+
+        transform: translate3d(0, 0, 0);
+
+    }
+
+}
+
+/* ~ RESPONSIVO */
+
+@media (max-width: 992px) {
+    
+    /* SEÇÃO PRIMÁRIA DO SITE*/
+
+    .section-div img {
+
+        display: none;
+
+    }
+
+    .section-div {
+
+        background-image: url(../../assets/img/paulo_feire_fundo_responsive.png);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position: center;
+        background-position-x: right;
+        background-clip: border-box;
+
+    }
+
+    header {
+
+        justify-content: space-between;
+        padding: 10px 70px;
+
+    }
+
+    header .navegacao-primaria {
+
+        display: none;
+        
+
+    }
+
+    nav i {
+
+        color: var(--btn-br-color-primary);
+        font-size: 3rem;
+        cursor: pointer;
+        display: block;
+
+    }
+
+    header .navegacao-primaria.ativado {
+
+        background: linear-gradient( rgba(14, 14, 14, 0.918), rgba(17, 17, 17, 0.89));
+        position: absolute;
+        display: grid;
+        top: 80px;
+        color: var(--btn-br-color-primary);
+        z-index: 1;
+        padding: 60px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border-radius: 0 0 4px 4px;
+        right: 20px;
+        animation: sobeSecao .8s ease-in-out forwards;
+        
+    }
+
+    header .logo {
+
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1.5px solid var(--color-br-logo);
+
+    }
+
+    /* SAÇÃO SOBRE PAULO FREIRE */
+
+    .sobre img {
+
+        grid-column: 1/-1;
+        justify-self: center;
+
+    }
+
+    .sobre_conteudo {
+
+        grid-column: 1/-1;
+
+    }
+
+}
+
+/* ~ RESPONSIVO  SLIDER */
+
+@media screen and (max-width: 768px) {
+    
+    .slide-descrpition {
+
+        padding: 10px 30px;
+
+
+    }
+    
+    .slide-controls {
+
+        margin: 15px auto 0px;
+
+    }
+
+    .slide-descrpition h3 {
+
+        font-size: 34px;
+
+    }
+
+    
+    .slide-descrpition p {
+
+        display: none;
+
+    }
+
+    .slide-control-button {
+
+        font-size: 14px;
+
+
+    }
+
+    .slide-control-button.active {
+
+        font-size: 18px;
+
+    }
+
+    .slide-nav-button {
+
+        margin-top: -20px;
+        font-size: 27px;
+        color: var(--btn-br-color-primary);
+
+    }
+
+    .slide-nav-previous {
+
+        left: 12px;
+
+    }
+
+    .slide-nav-next {
+
+        right: 12px;
+
+    }
+
+
+}
